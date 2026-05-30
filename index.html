@@ -1,0 +1,2046 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Expert Level Training Landing Page</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- GOOGLE FONT (LATO) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .effect {
+        transition: all 0.35s ease;
+        cursor: pointer;
+      }
+
+      .effect:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .effect-color {
+        transition: all 0.35s ease;
+        cursor: pointer;
+      }
+
+      .effect-color:hover {
+        transform: translateY(-10px) scale(1.02);
+        background-color: #7b7dfc !important;
+        box-shadow: 0 18px 40px rgba(123, 125, 252, 0.35);
+      }
+
+      .effect-color:hover i,
+      .effect-color:hover p,
+      .effect-color:hover h6,
+      .effect-color:hover small,
+      .effect-color:hover span,
+      .effect-color:hover a {
+        color: #fff !important;
+      }
+
+      /* ==========================================
+GLOBAL RESPONSIVE FIXES
+========================================== */
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      /* ==========================================
+LARGE TABLETS (991px and below)
+========================================== */
+
+      @media (max-width: 991.98px) {
+        /* Navbar */
+
+        .navbar-nav {
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        .navbar .d-flex.align-items-center.gap-3 {
+          justify-content: center;
+          margin-top: 20px;
+          flex-wrap: wrap;
+        }
+
+        /* Hero */
+
+        h1 {
+          font-size: 38px !important;
+          text-align: center;
+        }
+
+        .hero-content,
+        .col-lg-5 {
+          text-align: center;
+        }
+
+        .col-lg-5 .d-flex.flex-wrap.gap-3 {
+          justify-content: center;
+        }
+
+        .col-lg-5 .d-flex.align-items-center.mt-5 {
+          justify-content: center;
+        }
+
+        /* Hero Image */
+
+        .col-lg-7 > div {
+          min-height: auto !important;
+        }
+
+        .col-lg-7 img {
+          height: auto !important;
+        }
+
+        /* Floating stats card */
+
+        .col-lg-7 .effect {
+          position: relative !important;
+          top: auto !important;
+          right: auto !important;
+          margin: 20px auto;
+          width: 90% !important;
+        }
+
+        /* Sections */
+
+        section {
+          margin-top: 60px !important;
+        }
+
+        h2 {
+          font-size: 36px !important;
+        }
+
+        /* Mentor cards */
+
+        .col-lg-4 .d-flex.gap-4.align-items-center {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        /* CTA Banner */
+
+        .col-lg-3.text-center,
+        .col-lg-4.text-white,
+        .col-lg-5 {
+          text-align: center;
+        }
+
+        .col-lg-4.text-white .d-flex {
+          justify-content: center;
+        }
+
+        /* Footer */
+
+        footer .row > div {
+          text-align: center;
+        }
+
+        footer .d-flex.gap-3 {
+          justify-content: center;
+        }
+
+        footer .input-group {
+          max-width: 450px;
+          margin: auto;
+        }
+      }
+
+      /* ==========================================
+MOBILE DEVICES (767px and below)
+========================================== */
+
+      @media (max-width: 767.98px) {
+        /* Typography */
+
+        h1 {
+          font-size: 32px !important;
+          line-height: 1.3 !important;
+        }
+
+        h2 {
+          font-size: 28px !important;
+        }
+
+        h3 {
+          font-size: 24px !important;
+        }
+
+        h4 {
+          font-size: 20px !important;
+        }
+
+        p {
+          font-size: 15px !important;
+        }
+
+        /* Buttons */
+
+        .btn {
+          width: 100%;
+        }
+
+        .d-flex.flex-wrap.gap-3 .btn {
+          width: 100%;
+        }
+
+        /* Hero */
+
+        .col-lg-7 {
+          margin-top: 40px;
+        }
+
+        /* Purple Circle */
+
+        .col-lg-7 div[style*="border-radius: 50%"] {
+          width: 220px !important;
+          height: 220px !important;
+          left: 50% !important;
+          transform: translateX(-50%);
+        }
+
+        /* Hero Image */
+
+        .col-lg-7 img {
+          height: 350px !important;
+          object-fit: contain !important;
+        }
+
+        /* Floating Stats Card */
+
+        .effect {
+          width: 100% !important;
+        }
+
+        /* Program Cards */
+
+        .row.g-4 > div {
+          margin-bottom: 20px;
+        }
+
+        /* Learning Journey */
+
+        .shadow.border.rounded-5 .d-flex {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .shadow.border.rounded-5 .d-flex.flex-column {
+          align-items: center !important;
+        }
+
+        /* Mentors */
+
+        .rounded-5.shadow.border img {
+          width: 110px !important;
+          height: 110px !important;
+        }
+
+        /* Flexible Learning Section */
+
+        .position-relative.overflow-hidden.p-3 {
+          padding: 25px !important;
+        }
+
+        /* CTA Banner */
+
+        .container[style*="1400px"] h2 {
+          font-size: 28px !important;
+        }
+
+        /* Footer */
+
+        footer {
+          text-align: center;
+        }
+
+        footer .d-flex.gap-4 {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        footer .input-group {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        footer .form-control,
+        footer .input-group .btn {
+          width: 100%;
+          border-radius: 12px !important;
+        }
+      }
+
+      /* ==========================================
+SMALL MOBILE DEVICES
+========================================== */
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 28px !important;
+        }
+
+        h2 {
+          font-size: 24px !important;
+        }
+
+        p {
+          font-size: 14px !important;
+        }
+
+        .navbar-brand {
+          font-size: 1.8rem !important;
+        }
+
+        .badge {
+          font-size: 11px;
+        }
+
+        .btn {
+          padding: 12px 20px !important;
+          font-size: 14px;
+        }
+
+        .col-lg-7 img {
+          height: 280px !important;
+        }
+
+        .rounded-5.shadow.border img {
+          width: 90px !important;
+          height: 90px !important;
+        }
+      }
+
+      /* ==========================================
+TABLET PORTRAIT
+========================================== */
+
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        h1 {
+          font-size: 42px !important;
+          text-align: center;
+        }
+
+        .col-lg-5 {
+          text-align: center;
+        }
+
+        .col-lg-5 .d-flex {
+          justify-content: center;
+        }
+
+        .col-lg-7 {
+          margin-top: 50px;
+        }
+
+        .col-lg-7 img {
+          height: 450px !important;
+        }
+
+        .effect {
+          max-width: 350px;
+          margin: auto;
+        }
+      }
+
+      /* ==========================================
+TABLET LANDSCAPE
+========================================== */
+
+      @media (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) {
+        h1 {
+          font-size: 40px !important;
+        }
+
+        h2 {
+          font-size: 36px !important;
+        }
+
+        .col-lg-7 img {
+          height: 420px !important;
+        }
+
+        .effect {
+          transform: none !important;
+        }
+      }
+
+      /* ==========================================
+MOBILE LANDSCAPE
+========================================== */
+
+      @media (max-width: 926px) and (orientation: landscape) {
+        h1 {
+          font-size: 30px !important;
+        }
+
+        .col-lg-7 img {
+          height: 300px !important;
+        }
+
+        .col-lg-7 .effect {
+          width: 280px !important;
+        }
+
+        .btn {
+          width: auto;
+        }
+      }
+
+      /* ==========================================
+ROCKET CTA RESPONSIVE FIX
+========================================== */
+
+/* Desktop */
+@media (min-width: 992px) {
+  .mt-4 .container[style*="1400px"] > div {
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 320px !important;
+  }
+
+  .mt-4 .container[style*="1400px"] h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .mt-4 .container[style*="1400px"] > div {
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 280px !important;
+    border-radius: 24px !important;
+    padding: 20px;
+  }
+
+  .mt-4 .container[style*="1400px"] .row {
+    min-height: 280px !important;
+  }
+
+  .mt-4 .container[style*="1400px"] h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 767.98px) {
+  .mt-4 .container[style*="1400px"] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .mt-4 .container[style*="1400px"] > div {
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 240px !important;
+    border-radius: 20px !important;
+    padding: 20px 15px !important;
+  }
+
+  .mt-4 .container[style*="1400px"] .row {
+    min-height: 240px !important;
+    padding: 10px;
+  }
+
+  .mt-4 .container[style*="1400px"] h2 {
+    font-size: 1.45rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .mt-4 .container[style*="1400px"] .d-flex {
+    gap: 12px !important;
+  }
+
+  .mt-4 .container[style*="1400px"] .btn {
+    width: auto !important;
+    min-width: 150px !important;
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 575.98px) {
+  .mt-4 .container[style*="1400px"] > div {
+    min-height: 220px !important;
+    padding: 20px 15px !important;
+  }
+
+  .mt-4 .container[style*="1400px"] .row {
+    min-height: 220px !important;
+  }
+
+  .mt-4 .container[style*="1400px"] h2 {
+    font-size: 1.2rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .mt-4 .container[style*="1400px"] .d-flex {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mt-4 .container[style*="1400px"] .btn {
+    width: 100% !important;
+    max-width: 260px;
+    min-width: unset !important;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 926px) and (orientation: landscape) {
+  .mt-4 .container[style*="1400px"] > div {
+    min-height: 180px !important;
+    background-size: cover !important;
+  }
+
+  .mt-4 .container[style*="1400px"] .row {
+    min-height: 180px !important;
+  }
+
+  .mt-4 .container[style*="1400px"] h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .mt-4 .container[style*="1400px"] .btn {
+    width: auto !important;
+    padding: 10px 18px !important;
+  }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .mt-4 .container[style*="1400px"] > div {
+    min-height: 260px !important;
+    background-size: cover !important;
+  }
+
+  .mt-4 .container[style*="1400px"] h2 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) {
+  .mt-4 .container[style*="1400px"] > div {
+    min-height: 260px !important;
+    background-size: cover !important;
+  }
+
+  .mt-4 .container[style*="1400px"] h2 {
+    font-size: 1.7rem !important;
+  }
+}
+    </style>
+  </head>
+
+  <body style="font-family: &quot;Lato&quot;, sans-serif">
+    <!-- ================= HEADER ================= -->
+
+    <nav class="navbar navbar-expand-lg py-4" style="background: #f8f8fc">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold fs-2" href="#">
+          <span style="color: #4f46e5">flex</span
+          ><span style="color: #f5b400">work</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMain"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-dark" href="#"
+                >Our Services</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-dark" href="#">Who We Are</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-dark" href="#">How We Work</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-dark" href="#"
+                >Job Postings</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <a
+              href="#"
+              class="btn"
+              style="
+                background: #fff;
+                border: 1px solid #ececf5;
+                border-radius: 12px;
+                padding: 10px 22px;
+                font-weight: 600;
+              "
+            >
+              Login
+              <i class="bi bi-person-circle ms-1"></i>
+            </a>
+
+            <a
+              href="#"
+              class="btn"
+              style="
+                background: #f5b400;
+                color: #000;
+                border-radius: 12px;
+                padding: 10px 24px;
+                font-weight: 700;
+              "
+            >
+              Get Started
+              <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- LEFT CONTENT -->
+
+          <div class="col-lg-5">
+            <h1
+              style="
+                font-size: 48px;
+                font-weight: 800;
+                line-height: 1.15;
+                color: #11183a;
+              "
+            >
+              Level Up Your Career with Industry-Led
+              <span style="color: #7b7dfc"> Learning. </span>
+            </h1>
+
+            <p
+              style="
+                color: #5e6476;
+                margin-top: 30px;
+                font-size: 18px;
+                line-height: 1.9;
+              "
+            >
+              Specialized training program designed for industry professionals
+              ready to level up deep technical mastery, advanced frameworks, and
+              career-accelerating credentials.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a
+                href="#"
+                class="btn"
+                style="
+                  background: #7b7dfc;
+                  color: #fff;
+                  padding: 14px 30px;
+                  border-radius: 14px;
+                  font-weight: 600;
+                "
+              >
+                Explore Programs
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn"
+                style="
+                  background: #fff;
+                  border: 2px solid #d7d8e4;
+                  padding: 14px 30px;
+                  border-radius: 14px;
+                  font-weight: 600;
+                "
+              >
+                Book a Consultation
+              </a>
+            </div>
+
+            <!-- USERS -->
+
+            <div class="d-flex align-items-center mt-5">
+              <div class="d-flex">
+                <img
+                  src="https://i.pravatar.cc/50?img=11"
+                  style="
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    border: 3px solid #fff;
+                    margin-right: -12px;
+                  "
+                />
+
+                <img
+                  src="https://i.pravatar.cc/50?img=12"
+                  style="
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    border: 3px solid #fff;
+                    margin-right: -12px;
+                  "
+                />
+
+                <img
+                  src="https://i.pravatar.cc/50?img=13"
+                  style="
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    border: 3px solid #fff;
+                  "
+                />
+              </div>
+
+              <div class="ms-3">
+                <div class="fw-bold">10K+ professionals</div>
+
+                <small style="color: #6f7285"> worldwide trust FlexWork </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+
+          <div class="col-lg-7 mt-5 mt-lg-0">
+            <div
+              style="
+                position: relative;
+                background: #fff;
+                border-radius: 40px;
+                overflow: hidden;
+                min-height: 520px;
+              "
+            >
+              <!-- Purple Shape -->
+
+              <div
+                style="
+                  position: absolute;
+                  width: 350px;
+                  height: 350px;
+                  background: #7b7dfc;
+                  border-radius: 50%;
+                  top: -80px;
+                  left: 120px;
+                  opacity: 0.9;
+                "
+              ></div>
+
+              <!-- Main Image -->
+
+              <img
+                src="heroWhite.png"
+                class="img-fluid"
+                style="
+                  position: relative;
+                  z-index: 2;
+                  width: 100%;
+                  height: 520px;
+                  object-fit: cover;
+                "
+              />
+
+              <!-- STATS CARD -->
+
+              <div
+                class="effect"
+                style="
+                  position: absolute;
+                  right: 25px;
+                  top: 100px;
+                  z-index: 3;
+                  background: #fff;
+                  border-radius: 24px;
+                  width: 220px;
+                  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+                "
+              >
+                <div class="p-4">
+                  <div class="d-flex align-items-center mb-4">
+                    <div
+                      style="
+                        width: 50px;
+                        height: 50px;
+                        background: #f2f2ff;
+                        border-radius: 12px;
+                      "
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <i
+                        class="bi bi-journal-bookmark-fill fs-2"
+                        style="color: #7b7dfc"
+                      ></i>
+                    </div>
+
+                    <div class="ms-3">
+                      <h5 class="fw-bold mb-0">120+</h5>
+                      <small>Programs</small>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center mb-4">
+                    <div
+                      style="
+                        width: 50px;
+                        height: 50px;
+                        background: #f2f2ff;
+                        border-radius: 12px;
+                      "
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <i
+                        class="bi bi-people-fill fs-2"
+                        style="color: #7b7dfc"
+                      ></i>
+                    </div>
+
+                    <div class="ms-3">
+                      <h5 class="fw-bold mb-0">50K+</h5>
+                      <small>Learners</small>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div
+                      style="
+                        width: 50px;
+                        height: 50px;
+                        background: #f2f2ff;
+                        border-radius: 12px;
+                      "
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <i
+                        class="bi bi-award-fill fs-2"
+                        style="color: #7b7dfc"
+                      ></i>
+                    </div>
+
+                    <div class="ms-3">
+                      <h5 class="fw-bold mb-0">95%</h5>
+                      <small>Success Rate</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROGRAMS ================= -->
+
+    <section class="mt-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" style="font-size: 42px; color: #11183a">
+            Industry-Focused Learning Programs
+          </h2>
+
+          <p style="color: #6b7280">
+            Specialized learning programs designed to strengthen technical
+            expertise, leadership capabilities, and enterprise-level decision
+            making.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- CARD 1 -->
+
+          <div class="col-lg-4">
+            <div
+              class="effect"
+              style="
+                background-image: url(&quot;AdvanceFullStack (2).png&quot;);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 30px;
+                color: white;
+                height: 100%;
+                padding: 35px;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <span class="badge rounded-pill text-bg-light text-dark">
+                FULL STACK
+              </span>
+
+              <h3 class="mt-4 fw-bold">Advanced Full Stack Architecture</h3>
+
+              <p class="mt-3">
+                Build scalable enterprise applications with modern frameworks
+                and high-performance digital products.
+              </p>
+
+              <div class="mt-5 d-flex align-items-center">
+                <img
+                  src="https://i.pravatar.cc/50?img=8"
+                  style="width: 45px; height: 45px; border-radius: 50%"
+                />
+
+                <small class="ms-3">
+                  Led by senior engineers & <br />solution architects.
+                </small>
+              </div>
+
+              <button
+                class="btn rounded-circle"
+                style="
+                  position: absolute;
+                  right: 25px;
+                  bottom: 25px;
+                  width: 40px;
+                  height: 40px;
+                  background: #6d63ff;
+                  color: white;
+                "
+              >
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+
+          <div class="col-lg-3">
+            <div
+              class="bg-white h-100 p-4 border effect"
+              style="border-radius: 25px"
+            >
+              <span
+                class="badge rounded-pill"
+                style="background: #eef2ff; color: #6d63ff"
+              >
+                DATA SCIENCE
+              </span>
+
+              <h4 class="mt-4 fw-bold">Machine Learning Engineering</h4>
+
+              <p class="text-muted">
+                Develop solutions ready for real-time systems, automation, and
+                AI-driven workflows.
+              </p>
+
+              <div class="d-flex justify-content-between">
+                <small>Duration</small>
+                <strong>24 Weeks</strong>
+              </div>
+
+              <div class="mt-4 d-flex align-items-center">
+                <img
+                  src="https://i.pravatar.cc/50?img=15"
+                  style="width: 40px; height: 40px; border-radius: 50%"
+                />
+                <small class="ms-2"> Learn by experienced ML engineers. </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+
+          <div class="col-lg-3">
+            <div
+              class="bg-white h-100 p-4 border effect"
+              style="border-radius: 25px"
+            >
+              <span
+                class="badge rounded-pill"
+                style="background: #eef2ff; color: #7b7dfc"
+              >
+                CLOUD COMPUTING
+              </span>
+
+              <h4 class="mt-4 fw-bold">Cloud Solutions Architecture</h4>
+
+              <p class="text-muted">
+                Design secure and scalable cloud infrastructures using modern
+                enterprise practices.
+              </p>
+
+              <div class="d-flex justify-content-between">
+                <small>Format</small>
+                <strong>Project Based</strong>
+              </div>
+
+              <div class="mt-4 d-flex align-items-center">
+                <img
+                  src="https://i.pravatar.cc/50?img=24"
+                  style="width: 40px; height: 40px; border-radius: 50%"
+                />
+                <small class="ms-2">
+                  Guided by certified cloud architects.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+
+          <div class="col-lg-2">
+            <div
+              class="effect py-4 px-2"
+              style="
+                background: linear-gradient(135deg, #7c6cff, #5b4cff);
+                color: white;
+                border-radius: 25px;
+                height: 100%;
+              "
+            >
+              <h5 class="fw-semibold mb-3">Enterprise Learning Solutions</h5>
+
+              <p>
+                Customized corporate training programs designed for growing
+                teams, enterprises, and professionals looking to upskill in
+                high-demand domains.
+              </p>
+
+              <button
+                class="btn btn-light mt-3 p-2 fw-semibold"
+                style="color: #7b7dfc"
+              >
+                Book Consultation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================
+WHY CHOOSE OUR PROGRAMS
+======================================== -->
+
+    <section class="mt-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span
+            class="badge rounded-pill px-4 py-2"
+            style="background: #ede9fe; color: #6d63ff; font-weight: 600"
+          >
+            WHY CHOOSE US
+          </span>
+
+          <h2 class="fw-bold mt-4" style="font-size: 48px; color: #101828">
+            Why Choose Our Learning Programs
+          </h2>
+
+          <p
+            class="mx-auto"
+            style="max-width: 700px; color: #667085; font-size: 18px"
+          >
+            Industry-recognized learning experiences designed to accelerate
+            career growth and strengthen leadership skills.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- CARD 1 -->
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="h-100 bg-white text-center p-4 effect"
+              style="
+                border-radius: 28px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <div
+                class="mx-auto d-flex align-items-center justify-content-center"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: #f4f3ff;
+                  border-radius: 20px;
+                "
+              >
+                <i class="bi bi-stars" style="font-size: 36px; color: #6d63ff">
+                </i>
+              </div>
+
+              <h5 class="fw-bold mt-4">Advanced Industry Expertise</h5>
+
+              <p class="mt-3" style="color: #667085">
+                Learn directly from senior industry experts with years of
+                real-world experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="h-100 bg-white text-center p-4 effect"
+              style="
+                border-radius: 28px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <div
+                class="mx-auto d-flex align-items-center justify-content-center"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: #f4f3ff;
+                  border-radius: 20px;
+                "
+              >
+                <i
+                  class="bi bi-people-fill"
+                  style="font-size: 36px; color: #6d63ff"
+                >
+                </i>
+              </div>
+
+              <h5 class="fw-bold mt-4">Professional Network Access</h5>
+
+              <p class="mt-3" style="color: #667085">
+                Connect with ambitious professionals, mentors, and hiring
+                partners.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="h-100 bg-white text-center p-4 effect"
+              style="
+                border-radius: 28px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <div
+                class="mx-auto d-flex align-items-center justify-content-center"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: #f4f3ff;
+                  border-radius: 20px;
+                "
+              >
+                <i
+                  class="bi bi-mortarboard-fill"
+                  style="font-size: 36px; color: #6d63ff"
+                >
+                </i>
+              </div>
+
+              <h5 class="fw-bold mt-4">Hands-On Learning</h5>
+
+              <p class="mt-3" style="color: #667085">
+                Practical projects and real-world case studies to strengthen
+                your expertise.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="h-100 bg-white text-center p-4 effect"
+              style="
+                border-radius: 28px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <div
+                class="mx-auto d-flex align-items-center justify-content-center"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: #f4f3ff;
+                  border-radius: 20px;
+                "
+              >
+                <i
+                  class="bi bi-graph-up-arrow"
+                  style="font-size: 36px; color: #6d63ff"
+                >
+                </i>
+              </div>
+
+              <h5 class="fw-bold mt-4">Career Growth</h5>
+
+              <p class="mt-3" style="color: #667085">
+                Build leadership capabilities and unlock high-impact career
+                opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+THE PATH TO LEADERSHIP
+========================================= -->
+
+    <section class="mt-5">
+      <div class="container">
+        <!-- Section Header -->
+
+        <div class="text-center mb-5">
+          <span
+            class="badge rounded-pill px-4 py-2"
+            style="background: #ede9fe; color: #6d63ff; font-weight: 600"
+          >
+            LEARNING JOURNEY
+          </span>
+
+          <h2 class="fw-bold mt-4" style="font-size: 48px; color: #111827">
+            The Path to
+            <span style="color: #6d63ff"> Leadership </span>
+          </h2>
+
+          <p
+            class="mx-auto"
+            style="max-width: 720px; color: #667085; font-size: 18px"
+          >
+            A structured learning experience designed to transform technical
+            professionals into confident industry leaders.
+          </p>
+        </div>
+
+        <!-- Journey Cards -->
+
+        <div class="row g-4 align-items-stretch position-relative">
+          <!-- STEP 1 -->
+
+          <div class="col-lg-4">
+            <div class="bg-white h-100 p-4 effect shadow border rounded-5">
+              <div class="d-flex gap-4 align-items-stretch h-100">
+                <!-- Left Column -->
+                <div class="d-flex flex-column align-items-center gap-5">
+                  <!-- Number -->
+                  <div
+                    class="mb-3 d-flex align-items-center justify-content-center"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      background: #6d63ff;
+                      color: white;
+                      border-radius: 50%;
+                      font-weight: 700;
+                    "
+                  >
+                    01
+                  </div>
+
+                  <!-- Icon -->
+                  <div
+                    class="d-flex align-items-center justify-content-center rounded-4"
+                    style="width: 90px; height: 90px; background: #f4f3ff"
+                  >
+                    <i
+                      class="bi bi-display"
+                      style="font-size: 42px; color: #6d63ff"
+                    ></i>
+                  </div>
+                </div>
+
+                <!-- Right Column -->
+                <div
+                  class="text-start d-flex flex-column justify-content-center h-100"
+                >
+                  <h4 class="fw-bold mb-3">Live Expert Sessions</h4>
+
+                  <p style="color: #667085; line-height: 1.8">
+                    Learn directly from experienced industry professionals
+                    through interactive live classes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+
+          <div class="col-lg-4">
+            <div class="bg-white h-100 p-4 effect shadow border rounded-5">
+              <div class="d-flex gap-4 align-items-stretch h-100">
+                <!-- Left Column -->
+                <div class="d-flex flex-column align-items-center gap-5">
+                  <!-- Number -->
+                  <div
+                    class="mb-3 d-flex align-items-center justify-content-center"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      background: #6d63ff;
+                      color: white;
+                      border-radius: 50%;
+                      font-weight: 700;
+                    "
+                  >
+                    02
+                  </div>
+
+                  <!-- Icon -->
+                  <div
+                    class="d-flex align-items-center justify-content-center rounded-4"
+                    style="width: 90px; height: 90px; background: #f4f3ff"
+                  >
+                    <i
+                      class="bi bi-people-fill"
+                      style="font-size: 42px; color: #6d63ff"
+                    ></i>
+                  </div>
+                </div>
+
+                <!-- Right Column -->
+                <div
+                  class="text-start d-flex flex-column justify-content-center h-100"
+                >
+                  <h4 class="fw-bold mb-3">Live Expert Sessions</h4>
+
+                  <p style="color: #667085; line-height: 1.8">
+                    Learn directly from experienced industry professionals
+                    through interactive live classes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+
+          <div class="col-lg-4">
+            <div class="bg-white h-100 p-4 effect shadow border rounded-5">
+              <div class="d-flex gap-4 align-items-stretch h-100">
+                <!-- Left Column -->
+                <div class="d-flex flex-column align-items-center gap-5">
+                  <!-- Number -->
+                  <div
+                    class="mb-3 d-flex align-items-center justify-content-center"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      background: #6d63ff;
+                      color: white;
+                      border-radius: 50%;
+                      font-weight: 700;
+                    "
+                  >
+                    03
+                  </div>
+
+                  <!-- Icon -->
+                  <div
+                    class="d-flex align-items-center justify-content-center rounded-4"
+                    style="width: 90px; height: 90px; background: #f4f3ff"
+                  >
+                    <i
+                      class="bi bi-award-fill"
+                      style="font-size: 42px; color: #6d63ff"
+                    ></i>
+                  </div>
+                </div>
+
+                <!-- Right Column -->
+                <div
+                  class="text-start d-flex flex-column justify-content-center h-100"
+                >
+                  <h4 class="fw-bold mb-3">Capstone Projects</h4>
+
+                  <p style="color: #667085; line-height: 1.8">
+                    Apply your knowledge through real-world business projects
+                    and leadership challenges.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+MEET THE MASTER MENTORS
+========================================= -->
+
+    <section class="mt-5">
+      <div class="container">
+        <!-- Section Heading -->
+
+        <div class="text-center mb-5">
+          <span
+            class="badge rounded-pill px-4 py-2"
+            style="
+              background: #ede9fe;
+              color: #6d63ff;
+              font-weight: 600;
+              letter-spacing: 0.5px;
+            "
+          >
+            INDUSTRY EXPERTS
+          </span>
+
+          <h2 class="fw-bold mt-4" style="font-size: 48px; color: #111827">
+            Meet the
+            <span style="color: #6d63ff"> Master Mentors </span>
+          </h2>
+
+          <p
+            class="mx-auto"
+            style="max-width: 700px; color: #667085; font-size: 18px"
+          >
+            Learn from accomplished leaders, innovators, and industry veterans
+            who have built and scaled successful organizations across the globe.
+          </p>
+        </div>
+
+        <!-- Mentor Cards -->
+
+        <div class="row g-4">
+          <!-- Mentor 1 -->
+
+          <div class="col-lg-4">
+            <div
+              class="bg-white h-100 p-4 d-flex gap-4 align-items-center effect rounded-5 shadow border"
+            >
+              <!-- LEFT: IMAGE -->
+              <img
+                src="https://i.pravatar.cc/300?img=32"
+                alt=""
+                style="
+                  width: 140px;
+                  height: 140px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  flex-shrink: 0;
+                "
+              />
+
+              <!-- RIGHT: CONTENT -->
+              <div class="flex-grow-1">
+                <h4 class="fw-bold mb-1">Elena Rodriguez</h4>
+
+                <div style="color: #6d63ff; font-weight: 600">Former CTO</div>
+
+                <p class="mt-3 mb-0" style="color: #667085; line-height: 1.8">
+                  Technology executive with extensive experience leading digital
+                  transformation initiatives for global enterprises.
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="d-flex gap-3 mt-4">
+                  <a
+                    href="#"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      border-radius: 50%;
+                      background: #f4f3ff;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: #6d63ff;
+                    "
+                  >
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+
+                  <a
+                    href="#"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      border-radius: 50%;
+                      background: #f4f3ff;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: #6d63ff;
+                    "
+                  >
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentor 2 -->
+
+          <div class="col-lg-4">
+            <div
+              class="bg-white h-100 p-4 d-flex gap-4 align-items-center effect rounded-5 shadow border"
+            >
+              <!-- LEFT: IMAGE -->
+              <img
+                src="https://i.pravatar.cc/300?img=12"
+                alt=""
+                style="
+                  width: 140px;
+                  height: 140px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  flex-shrink: 0;
+                "
+              />
+
+              <!-- RIGHT: CONTENT -->
+              <div class="flex-grow-1">
+                <h4 class="fw-bold mb-1">Julian Thorne</h4>
+
+                <div style="color: #6d63ff; font-weight: 600">
+                  Founder & CEO
+                </div>
+
+                <p class="mt-3 mb-0" style="color: #667085; line-height: 1.8">
+                  Entrepreneur and business strategist specializing in
+                  innovation, growth, and organizational leadership.
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="d-flex gap-3 mt-4">
+                  <a
+                    href="#"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      border-radius: 50%;
+                      background: #f4f3ff;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: #6d63ff;
+                    "
+                  >
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+
+                  <a
+                    href="#"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      border-radius: 50%;
+                      background: #f4f3ff;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: #6d63ff;
+                    "
+                  >
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentor 3 -->
+
+          <div class="col-lg-4">
+            <div
+              class="bg-white h-100 p-4 d-flex gap-4 align-items-center effect rounded-5 shadow border"
+            >
+              <!-- LEFT: IMAGE -->
+              <img
+                src="https://i.pravatar.cc/300?img=47"
+                alt=""
+                style="
+                  width: 140px;
+                  height: 140px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  flex-shrink: 0;
+                "
+              />
+
+              <!-- RIGHT: CONTENT -->
+              <div class="flex-grow-1">
+                <h4 class="fw-bold mb-1">Aisha Khan</h4>
+
+                <div style="color: #6d63ff; font-weight: 600">
+                  VP of Strategy
+                </div>
+
+                <p class="mt-3 mb-0" style="color: #667085; line-height: 1.8">
+                  Expert in corporate strategy, market expansion, and leadership
+                  development for fast-growing companies.
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="d-flex gap-3 mt-4">
+                  <a
+                    href="#"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      border-radius: 50%;
+                      background: #f4f3ff;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: #6d63ff;
+                    "
+                  >
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+
+                  <a
+                    href="#"
+                    style="
+                      width: 42px;
+                      height: 42px;
+                      border-radius: 50%;
+                      background: #f4f3ff;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: #6d63ff;
+                    "
+                  >
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+FLEXIBLE LEARNING PLANS
+========================================= -->
+
+    <section class="mt-5">
+      <div class="container">
+        <div
+          class="position-relative overflow-hidden p-3"
+          style="
+            background: linear-gradient(135deg, #7b7dfc 0%, #8266ff 100%);
+            border-radius: 40px;
+          "
+        >
+          <div class="row align-items-center">
+            <!-- LEFT: IMAGE -->
+            <div class="col-lg-3 text-center">
+              <img
+                src="clipboard.png"
+                alt="Banner Image"
+                style="max-width: 100%; height: auto; display: inline-block"
+              />
+            </div>
+
+            <!-- CENTER: TEXT + BUTTONS -->
+            <div class="col-lg-4 text-white">
+              <h2 class="fw-bold" style="font-size: 34px; line-height: 1.15">
+                Flexible Learning Plans
+              </h2>
+
+              <p
+                class="mt-4"
+                style="
+                  color: rgba(255, 255, 255, 0.85);
+                  font-size: 18px;
+                  line-height: 1.9;
+                "
+              >
+                Upskill with Industry-Focused Programs Designed for Ambitious
+                Professionals ready to Grow with Expert Guidance.
+              </p>
+
+              <div class="mt-5 d-flex flex-wrap gap-3">
+                <a
+                  href="#"
+                  class="btn btn-warning px-4 py-3 fw-semibold rounded-4"
+                >
+                  Apply Now
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+                <a
+                  href="#"
+                  class="btn px-4 py-3 rounded-4"
+                  style="
+                    background: rgba(255, 255, 255, 0.12);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    color: white;
+                  "
+                >
+                  Talk to an Advisor
+                </a>
+              </div>
+            </div>
+
+            <!-- RIGHT: CARD -->
+            <div class="col-lg-5 mt-5 mt-lg-0">
+              <div class="bg-white shadow rounded-5 py-3 px-4 effect">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h3 class="fw-bold mb-0" style="color: #111827">
+                      Professional Access
+                    </h3>
+                    <span class="text-muted text-black-50"
+                      >Features in every Option</span
+                    >
+                  </div>
+                </div>
+
+                <div class="d-flex mb-3 mt-3">
+                  <i
+                    class="bi bi-check-circle-fill me-3"
+                    style="color: #6d63ff"
+                  ></i>
+                  <span>Complete program access</span>
+                </div>
+
+                <div class="d-flex mb-3">
+                  <i
+                    class="bi bi-check-circle-fill me-3"
+                    style="color: #6d63ff"
+                  ></i>
+                  <span>Live mentor-led sesions</span>
+                </div>
+
+                <div class="d-flex mb-3">
+                  <i
+                    class="bi bi-check-circle-fill me-3"
+                    style="color: #6d63ff"
+                  ></i>
+                  <span>Career-focused project work</span>
+                </div>
+
+                <div class="d-flex mb-3">
+                  <i
+                    class="bi bi-check-circle-fill me-3"
+                    style="color: #6d63ff"
+                  ></i>
+                  <span>Professional network access</span>
+                </div>
+
+                <div class="d-flex">
+                  <i
+                    class="bi bi-check-circle-fill me-3"
+                    style="color: #6d63ff"
+                  ></i>
+                  <span>Certificate support</span>
+                </div>
+
+                <div class="mt-3">
+                  <h6 class="text-semibold" style="color: #7b7dfc">
+                    EMI options available. Corporate sponsorship support
+                    available
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+ADVANCE YOUR EXPERTISE CTA
+========================================= -->
+
+    <section class="mt-4">
+      <div class="container" style="max-width: 1400px">
+        <div
+          class="position-relative overflow-hidden"
+          style="
+            background: url(&quot;rocketBanner.png&quot;) center center /
+              contain no-repeat;
+            border-radius: 32px;
+            min-height: 320px;
+          "
+        >
+          <div
+            class="row align-items-center justify-content-center h-100 text-center"
+            style="min-height: 320px"
+          >
+            <div class="col-lg-7">
+              <h2
+                class="fw-bold text-white mb-4"
+                style="font-size: 2rem; line-height: 1.2"
+              >
+                Advance Your Expertise.<br />
+                Accelerate Your Growth.
+              </h2>
+
+              <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a
+                  href="#"
+                  class="btn btn-warning fw-semibold px-4 py-3"
+                  style="border-radius: 12px; min-width: 160px"
+                >
+                  Apply Now
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+                <a
+                  href="#"
+                  class="btn text-white px-4 py-3"
+                  style="
+                    background: rgba(255, 255, 255, 0.12);
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    backdrop-filter: blur(8px);
+                    border-radius: 12px;
+                    min-width: 180px;
+                  "
+                >
+                  Talk to an Advisor
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+FOOTER SECTION
+========================================= -->
+
+    <footer class="mt-5" style="border-top: 1px solid #eef0f7">
+      <div class="container">
+        <div class="row g-4">
+          <!-- BRAND COLUMN -->
+
+          <div class="col-lg-3">
+            <h2 class="fw-bold">
+              <span style="color: #6d63ff">flex</span
+              ><span style="color: #f4b400">work</span>
+            </h2>
+
+            <p class="mt-3" style="color: #667085; line-height: 1.8">
+              Empowering professionals to grow into industry leaders through
+              structured learning, mentorship, and real-world experience.
+            </p>
+
+            <div class="d-flex gap-3 mt-4">
+              <a
+                href="#"
+                class="d-flex align-items-center justify-content-center"
+                style="
+                  width: 42px;
+                  height: 42px;
+                  border-radius: 50%;
+                  background: #f4f3ff;
+                  color: #6d63ff;
+                  text-decoration: none;
+                "
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+
+              <a
+                href="#"
+                class="d-flex align-items-center justify-content-center"
+                style="
+                  width: 42px;
+                  height: 42px;
+                  border-radius: 50%;
+                  background: #f4f3ff;
+                  color: #6d63ff;
+                  text-decoration: none;
+                "
+              >
+                <i class="bi bi-twitter-x"></i>
+              </a>
+
+              <a
+                href="#"
+                class="d-flex align-items-center justify-content-center"
+                style="
+                  width: 42px;
+                  height: 42px;
+                  border-radius: 50%;
+                  background: #f4f3ff;
+                  color: #6d63ff;
+                  text-decoration: none;
+                "
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a
+                href="#"
+                class="d-flex align-items-center justify-content-center"
+                style="
+                  width: 42px;
+                  height: 42px;
+                  border-radius: 50%;
+                  background: #f4f3ff;
+                  color: #6d63ff;
+                  text-decoration: none;
+                "
+              >
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- COMPANY -->
+
+          <div class="col-lg-2">
+            <h6 class="fw-bold mb-4">Company</h6>
+
+            <ul class="list-unstyled" style="color: #667085; line-height: 2">
+              <li>Home</li>
+              <li>Services</li>
+              <li>Who We Are</li>
+              <li>How We Work</li>
+              <li>Job Postings</li>
+            </ul>
+          </div>
+
+          <!-- RESOURCES -->
+
+          <div class="col-lg-2">
+            <h6 class="fw-bold mb-4">Resources</h6>
+
+            <ul class="list-unstyled" style="color: #667085; line-height: 2">
+              <li>Programs</li>
+              <li>Mentors</li>
+              <li>Learning Path</li>
+              <li>Career Guide</li>
+            </ul>
+          </div>
+
+          <!-- SUPPORT -->
+
+          <div class="col-lg-2">
+            <h6 class="fw-bold mb-4">Support</h6>
+
+            <ul class="list-unstyled" style="color: #667085; line-height: 2">
+              <li>Contact Us</li>
+              <li>Help Center</li>
+              <li>FAQ</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+            </ul>
+          </div>
+
+          <!-- NEWSLETTER -->
+
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-4">Subscribe to Newsletter</h6>
+
+            <p style="color: #667085">
+              Get the latest updates on programs and learning opportunities.
+            </p>
+
+            <div class="input-group mt-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter your email"
+                style="
+                  border-radius: 12px 0 0 12px;
+                  border: 1px solid #e5e7eb;
+                  height: 50px;
+                "
+              />
+
+              <button
+                class="btn"
+                style="
+                  background: #6d63ff;
+                  color: white;
+                  border-radius: 0 12px 12px 0;
+                  padding: 0 18px;
+                "
+              >
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM BAR -->
+
+        <hr class="my-5" style="border-color: #eef0f7" />
+
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3"
+        >
+          <p class="mb-2 mb-md-0" style="color: #667085">
+            © 2025 FlexWork. All rights reserved.
+          </p>
+
+          <div class="d-flex gap-4" style="color: #667085">
+            <a href="#" style="text-decoration: none; color: #667085">
+              Privacy Policy
+            </a>
+
+            <a href="#" style="text-decoration: none; color: #667085">
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= BOOTSTRAP JS BUNDLE (IMPORTANT) ================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
